@@ -1,0 +1,62 @@
+{
+  "name": "shebang-trim",
+  "description": "Replace `ts-node` shebangs with `node` shebangs in compiled scripts",
+  "keywords": [
+    "ts-node",
+    "tsc",
+    "shebang",
+    "cli"
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "shebang-trim.js",
+  "bin": "cli.js",
+  "scripts": {
+    "test:js": "nyc mocha \"*.spec.js\"",
+    "lint": "eslint \"**/*.js\"",
+    "prettier:check": "prettier --check \"**/*.@(js|yml|md|json)\"",
+    "prettier": "prettier --write \"**/*.@(js|yml|md|json)\"",
+    "test": "run-p --continue-on-error lint prettier-check"
+  },
+  "files": [
+    "**/*.js",
+    "!**/*.spec.js"
+  ],
+  "repository": "metabolize/shebang-trim",
+  "dependencies": {
+    "write-file-atomically": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^14.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-mocha": "^6.2.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.2.2",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^14.1.1",
+    "prettier": "^1.15.3",
+    "tmp": "^0.1.0",
+    "tmp-promise": "^2.0.2"
+  },
+  "engines": {
+    "node": ">= 10.x"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "all": true,
+    "exclude": [
+      "**/*.spec.js"
+    ],
+    "branches": 100,
+    "lines": 100,
+    "functions": 100,
+    "statements": 100
+  }
+}
