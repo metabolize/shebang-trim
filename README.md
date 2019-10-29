@@ -3,7 +3,8 @@
 [![version](https://img.shields.io/npm/v/shebang-trim?style=flat-square)][npm]
 [![license](https://img.shields.io/npm/l/shebang-trim?style=flat-square)][npm]
 [![build](https://img.shields.io/circleci/project/github/metabolize/shebang-trim?style=flat-square)][build]
-[![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)][prettier]
+![coverage](https://img.shields.io/badge/coverate-100%-brightreen?style=flat-square)
+[![code style](https://img.shields.io/badge/code_style-prettier-ff69b4?style=flat-square)][prettier]
 
 [npm]: https://npmjs.com/shebang-trim/
 [build]: https://circleci.com/gh/metabolize/shebang-trim/tree/master
