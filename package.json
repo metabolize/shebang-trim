@@ -43,7 +43,7 @@
     "nyc": "^15.0.0",
     "prettier": "^2.0.5",
     "tmp": "^0.2.1",
-    "tmp-promise": "^2.0.2"
+    "tmp-promise": "^3.0.2"
   },
   "engines": {
     "node": ">= 10.x"
