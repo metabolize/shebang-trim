@@ -16,7 +16,7 @@
     "lint": "eslint \"**/*.js\"",
     "prettier:check": "prettier --check \"**/*.@(js|yml|md|json)\"",
     "prettier": "prettier --write \"**/*.@(js|yml|md|json)\"",
-    "test": "run-p --continue-on-error lint prettier-check"
+    "test": "run-p --continue-on-error lint prettier:check"
   },
   "files": [
     "**/*.js",
