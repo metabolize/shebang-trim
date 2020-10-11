@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0 – Oct. 11, 2020
+
+- In addition to `ts-node`, support `ts-node-script`, which is now
+  recommended.
+
 ## 1.0.0 – July 3, 2020
 
 Version bump.
