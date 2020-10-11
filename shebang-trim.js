@@ -5,6 +5,7 @@ const readline = require('readline')
 const writeFileAtomically = require('write-file-atomically')
 
 const oldShebang = '#!/usr/bin/env ts-node'
+const oldShebangScriptMode = '#!/usr/bin/env ts-node-script'
 const newShebang = '#!/usr/bin/env node'
 
 function transformShebangLine(line) {
@@ -12,7 +13,11 @@ function transformShebangLine(line) {
     throw Error('Not a shebang')
   }
 
-  if (line === oldShebang || line === newShebang) {
+  if (
+    line === oldShebang ||
+    line === oldShebangScriptMode ||
+    line === newShebang
+  ) {
     return newShebang
   } else {
     throw Error(`Cowardly refusing to convert unknown shebang: ${line}`)
