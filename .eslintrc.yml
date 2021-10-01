@@ -1,5 +1,4 @@
 plugins:
-  - 'prettier'
   - mocha
 
 extends:
@@ -25,8 +24,6 @@ overrides:
       mocha/no-exclusive-tests: 'error'
 
 rules:
-  prettier/prettier: 'error'
-
   # Disable some rules from eslint:recommended.
   no-empty: ['error', { 'allowEmptyCatch': true }]
   # Allow unused parameters. In callbacks, removing them seems to obscure
