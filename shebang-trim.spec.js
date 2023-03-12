@@ -48,6 +48,22 @@ describe('shebang-trim', () => {
       expect(newContents).to.equal(source.replace('ts-node-script', 'node'))
     })
 
+    it('when a file contains the old shebang (script mode with esm flag), it rewrites it', async () => {
+      const source = `#!/usr/bin/env ts-node-script --esm
+      function main() {
+        console.log('Hello, world!')
+      }
+      `
+      await writeSource(source)
+
+      await rewriteShebang(path)
+
+      const newContents = await fs.readFile(path, 'utf8')
+      expect(newContents).to.equal(
+        source.replace('ts-node-script --esm', 'node')
+      )
+    })
+
     it('when a file contains the new shebang, it does nothing', async () => {
       const source = `#!/usr/bin/env node
       function main() {

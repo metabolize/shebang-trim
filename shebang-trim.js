@@ -6,6 +6,7 @@ const writeFileAtomically = require('write-file-atomically')
 
 const oldShebang = '#!/usr/bin/env ts-node'
 const oldShebangScriptMode = '#!/usr/bin/env ts-node-script'
+const oldShebangScriptModeWithEsmFlag = '#!/usr/bin/env ts-node-script --esm'
 const newShebang = '#!/usr/bin/env node'
 
 function transformShebangLine(line) {
@@ -16,6 +17,7 @@ function transformShebangLine(line) {
   if (
     line === oldShebang ||
     line === oldShebangScriptMode ||
+    line === oldShebangScriptModeWithEsmFlag ||
     line === newShebang
   ) {
     return newShebang
