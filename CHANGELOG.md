@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 – Mar. 12, 2023
+
+- Support `ts-node-script --esm`.
+
 ## 1.1.0 – Oct. 11, 2020
 
 - In addition to `ts-node`, support `ts-node-script`, which is now
