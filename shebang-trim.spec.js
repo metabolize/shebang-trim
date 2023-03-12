@@ -59,7 +59,9 @@ describe('shebang-trim', () => {
       await rewriteShebang(path)
 
       const newContents = await fs.readFile(path, 'utf8')
-      expect(newContents).to.equal(source.replace('ts-node-script --esm', 'node'))
+      expect(newContents).to.equal(
+        source.replace('ts-node-script --esm', 'node')
+      )
     })
 
     it('when a file contains the new shebang, it does nothing', async () => {
