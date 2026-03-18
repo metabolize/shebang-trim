@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 – Mar. 17, 2026
+
+- Support `tsx` shebangs.
+
 ## 1.2.0 – Mar. 12, 2023
 
 - Support `ts-node-script --esm`.
